@@ -85,6 +85,8 @@ Convert executable "shell.exe" into shellcode and generate a 64-bit payload to i
 
 * All payloads will be saved in the "output" folder in the same directory as the builder program.
 
+* When building the builder program on Windows, Windows Defender will flag the application as malware. This is due to the inclusion of Donut libraries, which Defender doesn't seem to like. If building on Windows, an exclusion will need to be made for the program to be built successfully.
+
 ---
 ## Credits
 
