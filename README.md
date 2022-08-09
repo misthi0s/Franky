@@ -2,7 +2,9 @@
 <h1 align=center>Franky - Shellcode Injection</h1>
 </head>
 
-![Franky Logo](images/franky.gif "Franky")
+<p align="center">
+  <img src="images/franky.gif" alt="Franky"/>
+</p>
 
 Franky is a shellcode generation and injection tool, designed to generate an executable payload to inject custom shellcode into another process.
 
